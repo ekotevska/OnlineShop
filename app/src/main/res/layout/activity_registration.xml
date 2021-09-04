@@ -10,7 +10,7 @@
     <EditText
         android:id="@+id/register_phone"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  phone"
@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/register_address"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  address"
@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/register_city"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  city"
@@ -43,7 +43,7 @@
     <EditText
         android:id="@+id/register_password_confirm"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  confirm password"
@@ -54,7 +54,7 @@
     <EditText
         android:id="@+id/register_username"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="  e-mail"
@@ -68,7 +68,7 @@
     <EditText
         android:id="@+id/register_password"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  password"
@@ -80,7 +80,7 @@
     <EditText
         android:id="@+id/register_name"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="  name"

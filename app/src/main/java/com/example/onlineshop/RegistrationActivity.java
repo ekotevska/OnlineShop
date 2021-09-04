@@ -34,7 +34,7 @@ public class RegistrationActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            input_database(v);
             }
         });
     }
@@ -61,6 +61,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
         user=email.getText().toString().trim();
         Intent intent = new Intent(this, MenuActivity.class);
+        intent.putExtra("username", user);
+        startActivity(intent);
 
         }
         }

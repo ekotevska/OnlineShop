@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +26,7 @@ import java.util.List;
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHolder> {
 
     private List<String> priceList;
-    private List<String> productlist;
+   private List<String> productlist;
     private Context mContext;
     private int rowLayout;
     int images[];
@@ -47,7 +48,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
    /*
     @Override
     protected void onCreate(Bundle savedInstanceState){
-
         spinner = (Spinner) spinner.findViewById(R.id.spinner1);
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(ProductsAdapter.this,
                 android.R.layout.,sizes);
@@ -76,7 +76,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
 */
     @Override
     public void onBindViewHolder(@NonNull ProductsAdapter.ViewHolder holder, int i) {
-        //String product= productlist.get(i);
+        String product= productlist.get(i);
         String price = priceList.get(i);
         holder.price.setText(price);
         holder.img.setImageResource(images[i]);
@@ -84,10 +84,13 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 myDatabase database = new myDatabase(v.getContext());
-                database.insertProduct(price, images[i], s);
+                database.insertProduct(price, images[i], "s");
+                notifyDataSetChanged();
                 Toast.makeText(v.getContext(), "Product successfully added to cart", Toast.LENGTH_SHORT).show();
+
             }
         });
+
         
     }
 
@@ -99,13 +102,16 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView product, size, price;
         public ImageView img;
-        public Button button;
+        public Button button, size_s, size_m, size_l;
 
         public ViewHolder(View itemView) {
             super(itemView);
             price = (TextView) itemView.findViewById(R.id.price);
             img = (ImageView) itemView.findViewById(R.id.img);
-
+            button = (Button) itemView.findViewById(R.id.button_add);
+            size_s=(RadioButton) itemView.findViewById(R.id.size_s);
+            size_m=(RadioButton) itemView.findViewById(R.id.size_m);
+            size_l=(RadioButton) itemView.findViewById(R.id.size_l);
 
         }
     }

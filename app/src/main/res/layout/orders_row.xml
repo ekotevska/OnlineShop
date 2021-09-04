@@ -15,8 +15,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@id/img"
+            app:layout_constraintTop_toTopOf="@id/img"
+            tools:text="@tools:sample/first_names"
+            android:layout_marginLeft="24dp" />
 
-
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="@tools:sample/first_names" />
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            tools:text="@tools:sample/first_names" />
         <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
@@ -32,18 +63,11 @@
             android:id="@+id/img"
             android:layout_width="130dp"
             android:layout_height="130dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/first"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/first"
             card_view:layout_constraintVertical_bias="0.052" />
 
-        <ImageButton
-            android:id="@+id/cancel"
-            android:layout_width="32dp"
-            android:layout_height="24dp"
-            android:background="@color/white"
-            android:src="@drawable/cancel"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

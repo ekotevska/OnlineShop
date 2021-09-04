@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/img11"
-        android:layout_width="208dp"
-        android:layout_height="154dp"
-        android:layout_marginBottom="172dp"
+        android:layout_width="214dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/logo"
         android:textColor="@color/black"
         android:textSize="40sp"

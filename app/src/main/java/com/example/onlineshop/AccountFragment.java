@@ -1,5 +1,7 @@
 package com.example.onlineshop;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,15 +20,16 @@ import android.view.ViewGroup;
  */
 public class AccountFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
+/*
     private String mParam1;
     private String mParam2;
-
+*/
+    String user;
+    ImageButton location;
+    Button logout;
     public AccountFragment() {
         // Required empty public constructor
     }
@@ -36,7 +42,7 @@ public class AccountFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment AccountFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static AccountFragment newInstance(String param1, String param2) {
         AccountFragment fragment = new AccountFragment();
         Bundle args = new Bundle();
@@ -49,11 +55,27 @@ public class AccountFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+       /* if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        }*/
     }
+/*
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        location = (ImageButton) getActivity().findViewById(R.id.dir);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String navigationUri = "google.navigation:q=" + 41.9990 + "," + 21.4200;
+                Intent googleMapsNavigation = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(navigationUri));
+                googleMapsNavigation.setPackage("com.google.android.apps.maps");
+                startActivity(googleMapsNavigation);
+            }
+        });
+        } */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

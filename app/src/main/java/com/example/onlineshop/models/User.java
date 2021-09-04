@@ -1,6 +1,6 @@
 package com.example.onlineshop.models;
 
-public class User {
+public class    User {
 
     private int id;
     private String email;

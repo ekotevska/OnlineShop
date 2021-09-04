@@ -6,7 +6,8 @@
         <item
             android:id="@+id/navigation_cart"
             android:icon="@drawable/cart"
-            android:title="Cart" />
+            android:title="Cart"
+            />
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/home"
@@ -15,4 +16,8 @@
             android:id="@+id/navigation_account"
             android:icon="@drawable/account"
             android:title="Account" />
+    <item
+        android:id="@+id/navigation_order"
+        android:icon="@drawable/orders"
+        android:title="Orders"/>
     </menu>
