@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,16 +48,17 @@ public class MainActivity extends AppCompatActivity {
         if(email.getText().toString().trim().length()==0 || password.getText().toString().trim().length()==0) {
             Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_LONG).show();
         } else {
-            myDatabase database= new myDatabase(MainActivity.this);
-            if(database.checkUser(email.getText().toString().trim(), password.getText().toString().trim())) {
+           /* myDatabase database= new myDatabase(MainActivity.this);
+            if(database.checkUser(email.getText().toString().trim(), password.getText().toString().trim())) */{
                 user=email.getText().toString().trim();
                 Intent intent = new Intent(view.getContext(), MenuActivity.class);
                 intent.putExtra("username", user);
                 startActivity(intent);
-                }
-            else {
+                Log.i(" TAG", " logged in" );
+            }
+            /*else {
                 Toast.makeText(this, "E-mail or password incorrect!", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
 
     }

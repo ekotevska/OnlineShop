@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShop">
         <activity
+            android:name=".CartAdapter"
+            android:label="@string/title_activity_cart_adapter"
+            android:theme="@style/Theme.OnlineShop.NoActionBar"></activity>
+        <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/Theme.OnlineShop.NoActionBar"></activity>
+            android:theme="@style/Theme.OnlineShop.NoActionBar" />
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
